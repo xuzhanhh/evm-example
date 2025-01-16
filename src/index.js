@@ -2287,7 +2287,7 @@ const initializeFormElements = () => {
    * Personal Sign
    */
   personalSign.onclick = async () => {
-    const exampleMessage = 'Example `personal_sign` message';
+    const exampleMessage = '0x1234 5678';
     try {
       const from = accounts[0];
       const msg = `0x${Buffer.from(exampleMessage, 'utf8').toString('hex')}`;
@@ -2376,7 +2376,7 @@ const initializeFormElements = () => {
    * Personal Sign Verify
    */
   personalSignVerify.onclick = async () => {
-    const exampleMessage = 'Example `personal_sign` message';
+    const exampleMessage = '0x1234 5678';
     try {
       const from = accounts[0];
       const msg = `0x${Buffer.from(exampleMessage, 'utf8').toString('hex')}`;
