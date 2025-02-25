@@ -2595,49 +2595,33 @@ const initializeFormElements = () => {
   signTypedDataV4.onclick = async () => {
     const msgParams = {
       domain: {
-        chainId: chainIdInt.toString(),
-        name: 'Ether Mail',
-        verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
+        name: 'Dai Stablecoin',
         version: '1',
+        verifyingContract: '0x6b175474e89094c44da98b954eedeac495271d0f',
+        chainId: 1,
+      },
+      primaryType: 'Permit',
+      types: {
+        EIP712Domain: [
+          { name: 'name', type: 'string' },
+          { name: 'version', type: 'string' },
+          { name: 'chainId', type: 'uint256' },
+          { name: 'verifyingContract', type: 'address' },
+        ],
+        Permit: [
+          { name: 'holder', type: 'address' },
+          { name: 'spender', type: 'address' },
+          { name: 'nonce', type: 'uint256' },
+          { name: 'expiry', type: 'uint256' },
+          { name: 'allowed', type: 'bool' },
+        ],
       },
       message: {
-        contents: 'Hello, Bob!',
-        from: {
-          name: 'Cow',
-          wallets: [
-            '0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826',
-            '0xDeaDbeefdEAdbeefdEadbEEFdeadbeEFdEaDbeeF',
-          ],
-        },
-        to: [
-          {
-            name: 'Bob',
-            wallets: [
-              '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
-              '0xB0BdaBea57B0BDABeA57b0bdABEA57b0BDabEa57',
-              '0xB0B0b0b0b0b0B000000000000000000000000000',
-            ],
-          },
-        ],
-        attachment: '0x',
-      },
-      primaryType: 'Mail',
-      types: {
-        EIP712Domain,
-        Group: [
-          { name: 'name', type: 'string' },
-          { name: 'members', type: 'Person[]' },
-        ],
-        Mail: [
-          { name: 'from', type: 'Person' },
-          { name: 'to', type: 'Person[]' },
-          { name: 'contents', type: 'string' },
-          { name: 'attachment', type: 'bytes' },
-        ],
-        Person: [
-          { name: 'name', type: 'string' },
-          { name: 'wallets', type: 'address[]' },
-        ],
+        holder: '0x8f3f37091082b71b0c5f7f39a96fdc2b349339db',
+        spender: '0x0000b96d1aca0c7d555deae4da6d9d5813e60000',
+        allowed: true,
+        nonce: 0,
+        expiry: 1860916504,
       },
     };
     try {
@@ -2660,49 +2644,33 @@ const initializeFormElements = () => {
   signTypedDataV4Verify.onclick = async () => {
     const msgParams = {
       domain: {
-        chainId: chainIdInt,
-        name: 'Ether Mail',
-        verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
+        name: 'Dai Stablecoin',
         version: '1',
+        verifyingContract: '0x6b175474e89094c44da98b954eedeac495271d0f',
+        chainId: 1,
+      },
+      primaryType: 'Permit',
+      types: {
+        EIP712Domain: [
+          { name: 'name', type: 'string' },
+          { name: 'version', type: 'string' },
+          { name: 'chainId', type: 'uint256' },
+          { name: 'verifyingContract', type: 'address' },
+        ],
+        Permit: [
+          { name: 'holder', type: 'address' },
+          { name: 'spender', type: 'address' },
+          { name: 'nonce', type: 'uint256' },
+          { name: 'expiry', type: 'uint256' },
+          { name: 'allowed', type: 'bool' },
+        ],
       },
       message: {
-        contents: 'Hello, Bob!',
-        from: {
-          name: 'Cow',
-          wallets: [
-            '0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826',
-            '0xDeaDbeefdEAdbeefdEadbEEFdeadbeEFdEaDbeeF',
-          ],
-        },
-        to: [
-          {
-            name: 'Bob',
-            wallets: [
-              '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
-              '0xB0BdaBea57B0BDABeA57b0bdABEA57b0BDabEa57',
-              '0xB0B0b0b0b0b0B000000000000000000000000000',
-            ],
-          },
-        ],
-        attachment: '0x',
-      },
-      primaryType: 'Mail',
-      types: {
-        EIP712Domain,
-        Group: [
-          { name: 'name', type: 'string' },
-          { name: 'members', type: 'Person[]' },
-        ],
-        Mail: [
-          { name: 'from', type: 'Person' },
-          { name: 'to', type: 'Person[]' },
-          { name: 'contents', type: 'string' },
-          { name: 'attachment', type: 'bytes' },
-        ],
-        Person: [
-          { name: 'name', type: 'string' },
-          { name: 'wallets', type: 'address[]' },
-        ],
+        holder: '0x8f3f37091082b71b0c5f7f39a96fdc2b349339db',
+        spender: '0x0000b96d1aca0c7d555deae4da6d9d5813e60000',
+        allowed: true,
+        nonce: 0,
+        expiry: 1860916504,
       },
     };
     try {
